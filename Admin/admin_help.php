@@ -243,6 +243,24 @@ else if ($_POST['action'] == 'update'){
 			echo"<div class='alert alert-success'>Animal Deleted Successfully</div>";
 	}
 	
+} else if ($_POST['action'] == 'addVaccination')
+{
+	$id = mysqli_real_escape_string($link, $_POST['id']);
+	$name = mysqli_real_escape_string($link, $_POST['name']);
+	$dose = mysqli_real_escape_string($link, $_POST['dose']);
+	$date = mysqli_real_escape_string($link, $_POST['date']);
+
+	$query = "INSERT INTO `vaccine` (`dog_id`, `name`, `dose`, `date`) VALUES ('$id','$name','$dose','$date')";
+
+	//echo $query;
+	
+	if(!mysqli_query($link,$query)){
+		die("error");
+	} else {
+		echo"<div class='alert alert-success'>Vaccination Added Successfully</div>";
+	}
+	
+
 } else if ($_POST['action'] == 'getFeatured'){
 	
 	$query = "SELECT prod_id FROM featured";

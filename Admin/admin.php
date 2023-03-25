@@ -63,10 +63,6 @@
 			<p class="deleteInfo" onclick="showHideBar('deleteInfo')"><i class="fas fa-user"></i> Delete Info </i></p>			
 			<p class="showAllAnimals" onclick="showHideBar('showAllAnimals')"><i class="fas fa-lock"></i> Show All </p>	
 			<p class="Addvaccinationstatus" onclick="showHideBar('Addvaccinationstatus')"><i class="fas fa-lock"></i> Add vaccination Status </p>
-			<p class="deliveredOrders" onclick="showHideBar('deliveredOrders')"><i class="fas fa-lock"></i> Delivered Orders </p>
-			<p class="updateFeatured" onclick="showHideBar('updateFeatured')"><i class="fas fa-money-check"></i> Update Featured Products </p>	
-			<p class="updateOnsale" onclick="showHideBar('updateOnsale')"><i class="fas fa-home"></i> Update On Sale Products </p>
-			<p class="Summary" onclick="showHideBar('Summary')"><i class="fas fa-home"></i> Summary </p>	
 			<a href="#"><p><i class="fas fa-sign-out-alt"></i> Log Out </p>	</a>
 		
 		</div>
@@ -230,153 +226,22 @@
 						<div class="col-md-6 style-boxes-and-labels">
 							
 							<label for="add_vaccination_animal_ID">Enter Animal ID</label>
-							<input type="text" id="update_animal_ID"/>
-						
-							<label class="hide-it"></label>
-							<button class="btn btn-warning btn-add-vaccination-1">Search</button>
+							<input type="text" id="add_vaccination_animal_ID"/>
 
-							<label for="add_vaccination_skin_color" class="hide-me">Skin Color</label>
-							<input type="text" id="add_vaccination_skin_color" class="hide-me"/>
+							<label for="add_vaccination_name">Name</label>
+							<input type="text" id="add_vaccination_name"/>
 							
-							<label for="add_vaccination_img" class="hide-me">Image 1</label>
-							<input type="file" id="add_vaccination_img" class="hide-me"/>
+							<label for="add_vaccination_dose">Dose</label>
+							<input type="number" id="add_vaccination_dose" min="1"/>
 							
-							<label class="hide-me"></label>
-							<img id="add_vaccination_show_img" src="" height="100px" class="hide-me">
-							
-							<label for="add_vaccination_mark" class="hide-me">Mark</label>
-							<input type="text" id="add_vaccination_mark" class="hide-me"/>
-							
-							<label for="add_vaccination_gender" class="hide-me">Gender</label>
-							<select id="add_vaccination_gender" name="gender" class="hide-me">
-								<option value="male">Male</option>
-								<option value="female">Female</option>
-							</select>
-							
-							<label for="add_vaccination_sterilized" class="hide-me">Sterilized</label>
-							<select id="add_vaccination_sterilized" name="sterilized" class="hide-me">
-								<option value="no">No</option>
-								<option value="yes">Yes</option>
-							</select>
-							
-							<label for="add_vaccination_sterilization_date" class="hide-me">Sterilization Date</label>
-							<input type="date" id="add_vaccination_sterilization_date" class="hide-me"/>
-							
-							<label for="add_vaccination_area" class="hide-me">Area</label>
-							<input type="text" id="add_vaccination_area" class="hide-me"/>
-
-							<label for="update_birth" class="hide-me">Birth</label>
-							<input type="date" id="update_birth" class="hide-me"/>
-							
-							<label class="hide-me"></label>
-							<button class="btn btn-warning btn-update-2 hide-me">Update</button>
+							<label for="add_vaccination_date">Date</label>
+							<input type="date" id="add_vaccination_date"/>
+	
+							<label></label>
+							<button class="btn btn-warning btn-add-vaccination-2">Update</button>
 							
 							<label class="hide-me"></label>
 							<input type="hidden" id="update_id">
-						</div>
-					
-					</div>
-				</div>
-				<div id="deliveredOrders">
-					<h3 class="title-top">Delivered Orders</h3>
-					<div class="input-fields row">
-						<div class="pass_data"></div>
-						<div class="col-md-6">
-							<table class="table table-responsive table-bordered">
-							
-							<thead>
-								<tr>
-									<th scope="col">Sno</th>
-									<th scope="col">Name</th>
-									<th scope="col">Email</th>
-									<th scope="col">Phone</th>
-									<th scope="col">Product_Name</th>
-									<th scope="col">Product Image</th>
-									<th scope="col">Quantity</th>
-									<th scope="col">Date_of_Order</th>
-									<th scope="col">Status</th>
-								</tr>
-							</thead>
-							<tbody class="generateDeliveredOrders">
-							
-							</tbody>
-							</table>
-						</div>
-					
-					</div>
-				</div>
-				<div id="updateFeatured">
-					<h3 class="title-top">Update Featured Product</h3>
-					
-					<h4 class="title-top">Currently featured</h4>
-					<div class="input-fields row">
-						<div class="featured_message"></div>
-						<div class="col-md-6 style-boxes-and-labels-featured getFeatured">
-
-						</div>
-					</div>
-					<h4 class="title-top">Add featured</h4>
-					<div class="input-fields row">
-						<div class="col-md-6 style-boxes-and-labels">
-						
-							<label for="featured_prod_name_add">Enter Product Name</label>
-							<input type="text" id="featured_prod_name_add"/>
-						
-							<label></label>
-							<button class="btn btn-warning btn-featured-add">Add Featured</button>
-							
-						</div>
-					</div>
-				</div>
-				<div id="updateOnsale">
-					<h3 class="title-top">Update On Sale</h3>
-					
-					<h4 class="title-top">Currently On Sale</h4>
-					<div class="input-fields row">
-						<div class="Sale_message"></div>
-						<div class="col-md-6 style-boxes-and-labels-featured getSale">
-
-						</div>
-					</div>
-					<h4 class="title-top">Add On Sale products</h4>
-					<div class="input-fields row">
-						<div class="col-md-6 style-boxes-and-labels">
-						
-							<label for="sale_prod_name_add">Enter Product Name</label>
-							<input type="text" id="sale_prod_name_add"/>
-						
-							<label></label>
-							<button class="btn btn-warning btn-sale-add">Add to Sale</button>
-							
-						</div>
-					</div>
-				</div>
-				<div id="Summary">
-					
-					<h3 class="title-top">Manage Addresses</h3>
-					<div class="input-fields row">
-						<div class="error_message"></div>
-						<div class="col-md-6 style-boxes-and-labels">
-							
-							
-							
-							<label for="AddressLine1">AddressLine1</label>
-							<input type="text" id="AddressLine1" />
-							
-							<label for="AddressLine2">AddressLine2</label>
-							<input type="text" id="AddressLine2"/>
-							
-							<label for="City">City</label>
-							<input type="text" id="City"/>
-							
-							<label for="State">State</label>
-							<input type="text" id="State"/>
-							
-							<label for="Pincode">Pincode</label>
-							<input type="text" id="Pincode"/>
-							
-							<label></label>
-							<button class="btn btn-warning btn-address">Save Changes</button>							
 						</div>
 					
 					</div>
@@ -511,6 +376,29 @@ function showHideBar(bar){
 
 $(document).ready(function(){
 	showHideBar(('addInfo'));
+});
+
+$('.btn-add-vaccination-2').click(function(){
+	
+	var action = 'addVaccination';
+
+	var id = $('#add_vaccination_animal_ID').val();
+	var name = $('#add_vaccination_name').val();
+	var dose = $('#add_vaccination_dose').val();
+	var date = $('#add_vaccination_date').val();
+
+	console.log(id);
+
+	$.ajax({
+		type: "POST",
+		url: "admin_help.php",
+		data: {action:action, id:id, name:name, dose:dose, date:date},
+		success:function(data){
+			
+			$('.add_vaccination_message').html(data);
+		}
+	  });
+	
 });
 
 $('.btn-update-1').click(function(){
