@@ -1,0 +1,174 @@
+.dashboard-side-bar{
+	background:white;
+	color:#888888;
+	padding:0px;
+	margin-top:10px;
+}
+.dash-top{
+	background:#7FBA22 !important;
+	color:white !important;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+.dashboard-side-bar p{
+	padding-left:30px;
+	padding-top:10px;
+	padding-bottom:10px;
+	border-top-right-radius: 20px;
+	border-bottom-right-radius: 20px;
+	margin:0px;
+	font-size:16px;
+	font-weight:600;
+	cursor:pointer;
+}
+.dashboard-side-bar p:hover{
+	background:#E9EFFD;
+	color:#3065D7;
+}
+#updateProduct{
+	display:none;
+}
+#activeOrders{
+	display:none;
+}
+#updateFeatured{
+	display:none;
+}
+#updateOnsale{
+	display:none;
+}
+#Summary{
+	display:none;
+}
+#dispachedOrders{
+	display:none;
+}
+#deliveredOrders{
+	display:none;
+}
+#deleteProduct{
+	display:none;
+}
+.hide-me{
+	display:none !important;
+}
+.dashboard-side-bar a{
+	text-decoration:none;
+	color:#888888;
+}
+#viewOrders .col{
+	width:95%;
+	background:#F5F6F8;
+	border-left:3px solid #3C6ADC;
+	padding:15px 10px;
+}
+
+.dotGreen{
+	color:#7FBA22;
+	font-size:10px;
+}
+.ordersDispach{
+	color:#888888;
+	font-weight:600;
+}
+.ordersCard{
+	background:white;
+	margin:2px;
+	padding:20px;	
+}
+.ordersBody h5{
+	color:black;
+	font-weight:500;
+	font-size:10px;
+}
+.button-cd{
+	color:#3065D7;
+	text-decoration:none;
+	border:2px solid white;
+	border-radius:10px;
+}
+.orderButtons a{
+	text-align:center;
+	display: block;
+	width: 100%;
+	justify-content:center;
+	padding:15px 10px;
+}
+
+.buttonTrack{
+	background:#7FBA22;
+	color:white !important;
+	font-size:16px;
+	border:2px solid #7FBA22;
+	border-radius:10px;
+}
+.buttonTrack:hover{
+	background:#7FBA22 !important;
+	color:white !important;
+	border:2px solid #7FBA22 !important;
+}
+.buttonDetails{
+	border:2px solid #3065D7 !important;
+	border-radius:10px !important;
+}
+.button-cd:hover{
+	background:#3065D7;
+	border:2px solid #3065D7;
+	color:white;
+	border-radius:10px;
+}
+.input-fields {
+  display: flex;
+  justify-content: space-between;
+  
+}
+.input-fields label {
+  display: block;
+  margin-bottom: 20px;
+  color: #797979;
+  font-size:16px;
+}
+
+input[type='text'],
+input[type='password'],
+input[type='number'] {
+  font-size: 16px;
+  width: 150%;
+  height: 35px;
+  padding-right: 10px;
+  padding-left: 16px;
+  color: rgba(46, 46, 46, .8);
+  border: 1.6px solid rgb(225, 225, 225);
+  border-radius: 4px;
+  outline: none;
+}
+ 
+input[type='text']:focus,
+input[type='password']:focus,
+input[type='number']:focus {
+  border-color: rgb(119, 219, 119);
+}
+
+.style-boxes-and-labels{
+	display:grid;
+    grid-template-columns: max-content max-content;
+    grid-gap:10px;
+}
+.style-boxes-and-labels-featured{
+	display:grid;
+    grid-template-columns: max-content max-content max-content;
+    grid-gap:10px;
+}
+.style-boxes-and-labels label{
+	text-align:right;
+}
+.style-boxes-and-labels button{
+	text-align:right;
+	width: 110px;
+}
+.title-top{
+	margin:20px 10px;
+}
+.delete_featured{
+	height:30px;
+}
