@@ -343,7 +343,7 @@ $('.btn-insert').click(function(){
 		processData: false,
         contentType: false,
 		success:function(data){
-			
+			console.log(data);
 			$('.insert_message').html(data);
 		}
 	  });

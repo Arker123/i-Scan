@@ -2,7 +2,17 @@
     session_start();
 	include './includes/db.php';
 
-    
+    $user_id = 0;
+
+    if(isset($_GET['id']))
+    {
+        $user_id = $_GET['id'];
+        //echo $user_id;
+    }
+    else
+    {
+        //redirect back to landing page
+    }
 ?>
 
 <!DOCTYPE html>
@@ -15,7 +25,7 @@
 <meta name="author" content="html.design">
 <!-- description -->
 <meta name="description" content="Login Form - Responsive Template">
-<link rel="shortcut icon" href="images/favicon.png">
+<link rel="shortcut icon" href="images2/favicon.png">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -71,6 +81,30 @@
 <!-- Jquery Rippler js -->
 <script src="js/jquery.rippler.min.js"></script>	
 <!-- script js -->
-<script src="js/script.js"></script>
+<script>
+
+var action = 'fetch';
+var id = <?php echo $user_id ?>;
+
+$.ajax({
+    type: "POST",
+    url: "support/fetch_data.php",
+    data: { action:action, id:id},
+    
+    success:function(data){
+        window.scrollTo(0, 0);
+        console.log(data);
+        if(data=="error")
+        {
+            console.log("error");
+        }
+        else 
+        {
+            $('#sneha').html(data);
+        }
+    }
+  });
+
+</script>
 </body>
 </html>

@@ -143,11 +143,28 @@ if ($_POST['action'] == 'insert'){
 		move_uploaded_file($path,"tmp_images/$name");
 		rename( "tmp_images/$name", "tmp_images/$newName");
 		copy("tmp_images/$newName","../User/images/$newName");
-		unlink("tmp_images/$newName");
+		//unlink("tmp_images/$newName");
 		
 		$query = "INSERT INTO `dog_data` (`id`,`photo`,`skinColor`,`mark`,`gender`,`isSterilized`,`whenSterilized`,`area`,`birth`) VALUES ('$id','$final_path','$skin_color','$mark','$gender','$sterilized','$sterilization_date','$territorial_area','$birth_date')";
 
 		//echo $query;
+		$output = 0;
+		$command=escapeshellcmd('./tmp_images/add_face');
+		$output = shell_exec($command);
+		echo $output;
+
+		do {
+			//sleep for 3 seconds
+			sleep(1);
+		}
+		while(!$output);
+
+		//unlink(".././landingPage/face_encodings.dat");
+		//unlink(".././landingPage/face_names.dat");
+		copy("./face_encodings.dat","../landingPage/face_encodings.dat");
+		copy("./face_names.dat","../landingPage/face_names.dat");
+		
+		//unlink("$newName");
 		
 		if(!mysqli_query($link,$query)){
 			die("error");
